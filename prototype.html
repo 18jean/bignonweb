@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon site web</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    header h1 {
+      font-size: 24px;
+      color: #000000;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0;
+    }
+    
+    header img {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline-block;
+    }
+    
+    nav ul li a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    nav ul li a:hover {
+      background-color: #555;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .page-section {
+      display: none;
+    }
+    
+    .active {
+      display: block;
+    }
+  </style>
+  <script>
+    function showPage(pageId) {
+      var sections = document.getElementsByClassName("page-section");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+      }
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1><img src="C:\Users\HP\Desktop\htlm\mon projet\BGN logo 4.png" alt="Logo">Bienvenue sur mon site</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="accueil.html" onclick="showPage('accueil')">Accueil</a></li>
+      <li><a href="a-propos.html" onclick="showPage('apropos')">À propos</a></li>
+      <li><a href="contact.html" onclick="showPage('contact')">Contacter nous</a></li>
+      <li><a href="actualite.html" onclick="showPage('actualite')">Actualité</a></li>
+    </ul>
+  </nav>
+  
+  <div class="content">
+    <div id="accueil" class="page-section active">
+      <p>Bienvenue sur BGN site. Nous sommes une entreprises diversifiée dans tous les domaines. Découvrez nous à travers nos différents menus.
+      <h2>Accueil</h2>
+      <p>Bienvenue sur la page d'accueil de mon site.</p>
+    </div>
+    
+    <div id="apropos" class="page-section">
+      <!-- Contenu de la page À propos -->
+      <h2>À propos</h2>
+      <p>Voici des informations sur moi et mon site.</p>
+    </div>
+    
+    <div id="contact" class="page-section">
+      <!-- Contenu de la page Contact -->
+      <h2>Contact</h2>
+      <p>Voici comment vous pouvez nous contacter.</p>
+    </div>
+    
+    <div id="actualite" class="page-section">
+      <!-- Contenu de la page Actualité -->
+      <h2>Actualité</h2>
+      <p>Découvrez les dernières actualités ici.</p>
+    </div>
+  </div>
+</body>
+</html>
